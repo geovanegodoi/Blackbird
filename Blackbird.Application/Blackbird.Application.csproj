@@ -6,7 +6,7 @@
 
   <ItemGroup>
     <Folder Include="Services\" />
-    <Folder Include="DTO\" />
+    <Folder Include="TO\" />
     <Folder Include="Authorization\" />
   </ItemGroup>
 </Project>

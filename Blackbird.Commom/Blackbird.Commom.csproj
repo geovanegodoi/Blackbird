@@ -6,6 +6,7 @@
 
   <ItemGroup>
     <Compile Remove="Class1.cs" />
+    <Compile Remove="ObjectMapper\AutoMapAttribute.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Session\" />
@@ -13,5 +14,12 @@
     <Folder Include="Logging\" />
     <Folder Include="DepencyInjection\" />
     <Folder Include="ObjectMapper\" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="7.0.1" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Blackbird.Domain\Blackbird.Domain.csproj" />
+    <ProjectReference Include="..\Blackbird.Application\Blackbird.Application.csproj" />
   </ItemGroup>
 </Project>
