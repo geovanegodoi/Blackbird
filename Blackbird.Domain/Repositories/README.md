@@ -1,4 +1,4 @@
-# Repositories Interfaces
+# Repository Interfaces
 
 Used to abstract data access from higher layers. **"Mediates between the domain and data mapping layers using a collection-like interface for accessing domain objects"** (Martin Fowler).
 
