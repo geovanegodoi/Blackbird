@@ -6,7 +6,7 @@ It uses Data Transfer Objects to get data from and return data to the presentati
 
 It can also deal with Authorization, Caching, Audit Logging, Object Mapping, the Session and so on...
 
-# Application Services 
+## Application Services 
 
 Used to expose domain logic to the presentation layer. 
 
