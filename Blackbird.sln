@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Blackbird.Presentation", "B
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Blackbird.Services", "Blackbird.Services\Blackbird.Services.csproj", "{06D86AB1-7A3B-479A-B276-6BA377509D51}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Blackbird.Commom", "Blackbird.Commom\Blackbird.Commom.csproj", "{BD6B40FF-731F-448D-93D8-7C1D4A990809}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -37,5 +39,9 @@ Global
 		{06D86AB1-7A3B-479A-B276-6BA377509D51}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{06D86AB1-7A3B-479A-B276-6BA377509D51}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{06D86AB1-7A3B-479A-B276-6BA377509D51}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BD6B40FF-731F-448D-93D8-7C1D4A990809}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BD6B40FF-731F-448D-93D8-7C1D4A990809}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BD6B40FF-731F-448D-93D8-7C1D4A990809}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BD6B40FF-731F-448D-93D8-7C1D4A990809}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

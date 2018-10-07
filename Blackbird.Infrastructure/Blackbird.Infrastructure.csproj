@@ -4,4 +4,10 @@
     <TargetFramework>netcoreapp2.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="ORM\" />
+    <Folder Include="Repositories\" />
+    <Folder Include="Migrations\" />
+    <Folder Include="DataFilters\" />
+  </ItemGroup>
 </Project>
