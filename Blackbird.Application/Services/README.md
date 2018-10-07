@@ -1,5 +1,5 @@
 # Application Services 
-*In an ideally layered application, the presentation layer never directly works with domain objects.*
+**_In an ideally layered application, the presentation layer never directly works with domain objects._**
 
 Used to expose domain logic to the presentation layer. 
 
