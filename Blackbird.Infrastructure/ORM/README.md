@@ -2,4 +2,4 @@
 
 Provides an abstraction for accessing the database objects throughout .NET objects.
 
-Friendly way to manipulate the database objects data.
+Friendly way to manipulate the database data.
