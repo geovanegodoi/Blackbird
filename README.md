@@ -14,3 +14,5 @@ There are four fundamental layers in Domain Driven Design (DDD):
 * **Domain Layer:** Includes business objects and their rules. This is the heart of the application.
 
 * **Infrastructure Layer:** Provides generic technical capabilities that support higher layers mostly using 3rd-party libraries.
+
+![Image of Yaktocat](https://raw.githubusercontent.com/aspnetboilerplate/aspnetboilerplate/master/doc/WebSite/images/abp-nlayer-architecture.png)
