@@ -4,6 +4,6 @@ ASP.NET Core MVC (Model-View-Controller) can be considered to be the presentatio
 
 It can be a physical layer (uses application via HTTP APIs) or a logical layer (directly injects and uses application services). 
 
-In either case it can include Localization, Navigation, Object Mapping, Caching, Configuration Management, Audit Logging and so on. 
+In either case it can include Localization, Navigation, Configuration Management and so on. 
 
 It also deals with Authorization, Session, Features (for multi-tenant applications) and Exception Handling.
