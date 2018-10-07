@@ -1,6 +1,6 @@
 # Presentation Layer
 
-ASP.NET [Core] MVC (Model-View-Controller) can be considered to be the presentation layer. 
+ASP.NET Core MVC (Model-View-Controller) can be considered to be the presentation layer. 
 
 It can be a physical layer (uses application via HTTP APIs) or a logical layer (directly injects and uses application services). 
 
