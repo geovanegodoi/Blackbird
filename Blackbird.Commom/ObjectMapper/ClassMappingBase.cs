@@ -1,10 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Reflection;
 using AutoMapper;
-using Blackbird.Application.TO;
-using Blackbird.Domain.Entities;
 
 namespace Blackbird.Commom.ObjectMapper
 {

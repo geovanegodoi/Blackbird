@@ -3,9 +3,8 @@ using Blackbird.Domain.Entities;
 
 namespace Blackbird.Domain.Repositories
 {
-    public interface ICustomerRepository<TKey, TEntity> : IRepository<TKey, TEntity>, IRepositoryAsync<TKey, TEntity>
-        where TEntity : IEntity<TKey>
+    public interface ICustomerRepository 
+        : IRepository<Guid, Customer>, IRepositoryAsync<Guid, Customer>
     {
-
     }
 }

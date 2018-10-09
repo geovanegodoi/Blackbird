@@ -5,8 +5,8 @@ using Blackbird.Infrastructure.ORM;
 
 namespace Blackbird.Infrastructure.Repositories
 {
-    public class ProductRepository : 
-        RepositoryAsyncBase<Guid, Product>, IProductRepository<Guid, Product>
+    public class ProductRepository 
+        : RepositoryAsyncBase<Guid, Product>, IProductRepository
     {
         public ProductRepository(BlackbirdDbContext context)
             : base(context)

@@ -8,5 +8,17 @@
     <Folder Include="Services\" />
     <Folder Include="TO\" />
     <Folder Include="Authorization\" />
+    <Folder Include="Services\Base\" />
+    <Folder Include="Services\Customer\" />
+    <Folder Include="Services\Person\" />
+    <Folder Include="Services\Product\" />
+    <Folder Include="Services\Purchase\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Blackbird.Domain\Blackbird.Domain.csproj" />
+    <ProjectReference Include="..\Blackbird.Commom\Blackbird.Commom.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="DTO\README.md" />
   </ItemGroup>
 </Project>

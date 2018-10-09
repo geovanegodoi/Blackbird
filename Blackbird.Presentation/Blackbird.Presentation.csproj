@@ -11,5 +11,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Blackbird.Commom\Blackbird.Commom.csproj" />
+    <ProjectReference Include="..\Blackbird.Application\Blackbird.Application.csproj" />
   </ItemGroup>
 </Project>
