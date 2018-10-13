@@ -7,10 +7,10 @@ namespace Blackbird.Persistence.Context
 {
     public class DbContextInitializer
     {
-        public static void Initialize(BlackbirdDbContext context)
+        public static void Initialize()
         {
             var initializer = new DbContextInitializer();
-            initializer.SeedEverything(context);
+            initializer.SeedEverything(BlackbirdDbContext.Create());
         }
 
         public void SeedEverything(BlackbirdDbContext context)
@@ -43,13 +43,20 @@ namespace Blackbird.Persistence.Context
             {
                 customers.Add(new Customer(person.Name, person.Email, person.Birthdate,ToLogin(person.Name), "123456"));
             }
-            context.Customers.AddRange(customers.ToArray());
+            context.Customers.AddRange(customers);
             context.SaveChanges();
         }
 
         private void SeedProducts(BlackbirdDbContext context)
         {
-
+            var prodCodes = new string[] { "A", "B", "C", "D", "E", "F", "G", "H", "I", "J" };
+            var products = new List<Product>();
+            foreach (var code in prodCodes)
+            {
+                products.Add(new Product($"Product {code}", $"This is the description of the product {code}"));
+            }
+            context.Products.AddRange(products);
+            context.SaveChanges();
         }
 
         private void SeedPurchases(BlackbirdDbContext context)

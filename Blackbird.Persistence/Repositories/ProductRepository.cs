@@ -8,7 +8,7 @@ namespace Blackbird.Persistence.Repositories
     public class ProductRepository 
         : RepositoryAsyncBase<Guid, Product>, IProductRepository
     {
-        public ProductRepository(BlackbirdDbContext context)
+        public ProductRepository()
         {
 
         }

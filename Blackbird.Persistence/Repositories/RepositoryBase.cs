@@ -18,7 +18,7 @@ namespace Blackbird.Persistence.Repositories
 
         protected RepositoryBase()
         {
-            _context = BlackbirdDbContext.CreateDbContext();
+            _context = BlackbirdDbContext.Create();
             _table = _context.Set<TEntity>();
         }
 

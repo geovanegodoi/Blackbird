@@ -7,7 +7,7 @@ namespace Blackbird.Persistence.Context
 {
     public class BlackbirdDbContext : DbContext
     {
-        public static BlackbirdDbContext CreateDbContext()
+        public static BlackbirdDbContext Create()
         {
             var options = new DbContextOptionsBuilder<BlackbirdDbContext>()
                                 .UseInMemoryDatabase("BLACKBIRDDB")
@@ -19,7 +19,7 @@ namespace Blackbird.Persistence.Context
         public BlackbirdDbContext(DbContextOptions<BlackbirdDbContext> options)
             : base(options)
         {
-            DbContextInitializer.Initialize(this);
+
         }
 
         public DbSet<Customer> Customers { get; set; }

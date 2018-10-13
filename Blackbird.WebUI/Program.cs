@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore;
+﻿using Blackbird.Persistence.Context;
+using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
 
 namespace Blackbird.WebUI
@@ -7,6 +8,8 @@ namespace Blackbird.WebUI
     {
         public static void Main(string[] args)
         {
+            DbContextInitializer.Initialize();
+
             CreateWebHostBuilder(args).Build().Run();
         }
 
