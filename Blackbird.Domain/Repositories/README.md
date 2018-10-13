@@ -12,4 +12,4 @@ Generally, a separate repository is used for each Entity (or Aggregate Root).
 
 - Always create a repository base class for your application for custom repositories, as defined above.
 
-- Define **interfaces for your repositories in the domain layer** (.Core project in startup template), and **repository implementation classes in the infrastructure layer**, if you want to abstract EF from your domain/application.
+- Define **interfaces for your repositories in the domain layer** (.Core project in startup template), and **repository implementation classes in the persistence layer**, if you want to abstract EF from your domain/application.

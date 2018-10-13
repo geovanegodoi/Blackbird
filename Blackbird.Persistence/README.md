@@ -1,4 +1,4 @@
-# Infrastructure Layer
+# Persistence Layer
 
 The infrastructure layer makes other layers work: **It implements the repository interfaces** (using Entity Framework Core for example) to actually work with a real database. 
 
