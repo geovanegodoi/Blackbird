@@ -3,7 +3,7 @@ using Blackbird.Commom.IoC;
 using Blackbird.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 
-namespace Blackbird.Persistence.ORM
+namespace Blackbird.Persistence.Context
 {
     public class BlackbirdDbContext : DbContext
     {

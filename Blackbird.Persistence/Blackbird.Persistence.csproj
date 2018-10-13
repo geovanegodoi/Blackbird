@@ -6,7 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="ORM\" />
+    <Folder Include="Context\" />
     <Folder Include="Repositories\" />
     <Folder Include="Migrations\" />
     <Folder Include="DataFilters\" />

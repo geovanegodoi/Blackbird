@@ -4,7 +4,7 @@ using System.Linq;
 using System.Linq.Expressions;
 using Blackbird.Domain.Entities;
 using Blackbird.Domain.Repositories;
-using Blackbird.Persistence.ORM;
+using Blackbird.Persistence.Context;
 using Microsoft.EntityFrameworkCore;
 
 namespace Blackbird.Persistence.Repositories

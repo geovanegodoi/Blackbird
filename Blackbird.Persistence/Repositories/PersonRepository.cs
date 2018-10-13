@@ -1,7 +1,7 @@
 ﻿using System;
 using Blackbird.Domain.Entities;
 using Blackbird.Domain.Repositories;
-using Blackbird.Persistence.ORM;
+using Blackbird.Persistence.Context;
 
 namespace Blackbird.Persistence.Repositories
 {

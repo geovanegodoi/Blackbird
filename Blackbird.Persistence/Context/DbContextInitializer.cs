@@ -3,7 +3,7 @@ using Blackbird.Domain.Entities;
 using System.Linq;
 using System.Collections.Generic;
 
-namespace Blackbird.Persistence.ORM
+namespace Blackbird.Persistence.Context
 {
     public class DbContextInitializer
     {
