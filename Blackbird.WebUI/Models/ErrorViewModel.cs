@@ -1,6 +1,6 @@
 using System;
 
-namespace Blackbird.Presentation.Models
+namespace Blackbird.WebUI.Models
 {
     public class ErrorViewModel
     {

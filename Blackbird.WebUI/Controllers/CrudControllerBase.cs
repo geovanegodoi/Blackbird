@@ -5,7 +5,7 @@ using Blackbird.Application.TO;
 using Blackbird.Commom.ServiceLocation;
 using Microsoft.AspNetCore.Mvc;
 
-namespace Blackbird.Presentation.Controllers
+namespace Blackbird.WebUI.Controllers
 {
     public abstract class CrudControllerBase<TService, TKey, TDto> : Controller, ICrudController<TKey, TDto>
         where TService : ICrudAppService<TKey, TDto>

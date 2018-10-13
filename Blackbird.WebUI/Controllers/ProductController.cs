@@ -2,7 +2,7 @@
 using Blackbird.Application.Services;
 using Blackbird.Application.TO;
 
-namespace Blackbird.Presentation.Controllers
+namespace Blackbird.WebUI.Controllers
 {
     public class ProductController 
         : CrudControllerBase<IProductService, Guid, ProductTO>, ICrudController<Guid, ProductTO>

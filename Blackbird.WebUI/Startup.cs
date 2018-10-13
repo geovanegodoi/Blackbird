@@ -3,7 +3,7 @@ using Blackbird.Application.TO;
 using Blackbird.Commom.IoC;
 using Blackbird.Commom.Mapper;
 using Blackbird.Commom.ServiceLocation;
-using Blackbird.Presentation.Controllers;
+using Blackbird.WebUI.Controllers;
 using Castle.Windsor.MsDependencyInjection;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -12,7 +12,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace Blackbird.Presentation
+namespace Blackbird.WebUI
 {
     public class Startup
     {

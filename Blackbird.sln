@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Blackbird.Application", "Bl
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Blackbird.Persistence", "Blackbird.Persistence\Blackbird.Persistence.csproj", "{6A72BEFB-E501-4B31-9B79-F71577A06E2E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Blackbird.Presentation", "Blackbird.Presentation\Blackbird.Presentation.csproj", "{26C7F5C0-C7DA-4078-97E3-0F7ED2A3AFD6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Blackbird.WebUI", "Blackbird.WebUI\Blackbird.WebUI.csproj", "{26C7F5C0-C7DA-4078-97E3-0F7ED2A3AFD6}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Blackbird.Services", "Blackbird.Services\Blackbird.Services.csproj", "{06D86AB1-7A3B-479A-B276-6BA377509D51}"
 EndProject

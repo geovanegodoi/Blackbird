@@ -4,10 +4,10 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using Blackbird.Presentation.Models;
+using Blackbird.WebUI.Models;
 using Blackbird.Application.Services;
 
-namespace Blackbird.Presentation.Controllers
+namespace Blackbird.WebUI.Controllers
 {
     public class HomeController : Controller
     {
