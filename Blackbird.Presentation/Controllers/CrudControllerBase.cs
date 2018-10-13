@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using Blackbird.Application.Services;
 using Blackbird.Application.TO;
+using Blackbird.Commom.ServiceLocation;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Blackbird.Presentation.Controllers
@@ -11,6 +12,8 @@ namespace Blackbird.Presentation.Controllers
         where TDto : ITO
     {
         private readonly TService _service;
+
+        protected TService DefaultService { get; private set; }
 
         protected CrudControllerBase(TService service)
         {

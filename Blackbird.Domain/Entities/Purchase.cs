@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using Blackbird.Domain.Enumerations;
 
 namespace Blackbird.Domain.Entities
@@ -8,18 +9,16 @@ namespace Blackbird.Domain.Entities
     {
         public Guid CustomerId { get; set; }
 
-        public IEnumerable<Guid> ProductIds { get; set; }
+        [NotMapped]
+        public List<Guid> ProductIds { get; set; } = new List<Guid>();
 
         public DateTime Created { get; set; } = DateTime.Now;
 
         public PaymentType PaymentType { get; set; }
 
-        public Purchase(Guid customerId, IEnumerable<Guid> productIds, PaymentType paymentType)
-            : base(Guid.NewGuid())
+        public Purchase() : base(Guid.NewGuid())
         {
-            CustomerId = customerId;
-            ProductIds = productIds;
-            PaymentType = paymentType;
+
         }
     }
 }

@@ -5,7 +5,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Blackbird.Domain", "Blackbi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Blackbird.Application", "Blackbird.Application\Blackbird.Application.csproj", "{14E4D78B-B26A-4C4B-8CD0-1C93330AE16C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Blackbird.Infrastructure", "Blackbird.Infrastructure\Blackbird.Infrastructure.csproj", "{6A72BEFB-E501-4B31-9B79-F71577A06E2E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Blackbird.Persistence", "Blackbird.Persistence\Blackbird.Persistence.csproj", "{6A72BEFB-E501-4B31-9B79-F71577A06E2E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Blackbird.Presentation", "Blackbird.Presentation\Blackbird.Presentation.csproj", "{26C7F5C0-C7DA-4078-97E3-0F7ED2A3AFD6}"
 EndProject

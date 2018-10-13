@@ -1,7 +1,7 @@
 ﻿using System;
 namespace Blackbird.Application.TO
 {
-    public class PersonTO : ITO
+    public class PersonTO : EntityTO<Guid>
     {
         public string Name { get; set; }
 

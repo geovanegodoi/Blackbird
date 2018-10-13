@@ -1,11 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using Blackbird.Application.Services;
+using Blackbird.Commom.IoC;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Blackbird.Presentation.Controllers
 {
-    public interface ICrudController<TKey, TDto>
+    public interface ICrudController<TKey, TDto> : IControllerLifestyle
     {
         [HttpGet]
         IActionResult Index();

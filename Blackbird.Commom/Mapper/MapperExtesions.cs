@@ -1,9 +1,8 @@
 ﻿using System;
-using AutoMapper;
 
-namespace Blackbird.Commom.ObjectMapper
+namespace Blackbird.Commom.Mapper
 {
-    public static class ObjectMapperExtesions
+    public static class MapperExtesions
     {
         /// <summary>
         /// Converts an object to another using AutoMapper library. Creates a new object of <typeparamref name="TDestination"/>.
@@ -13,7 +12,7 @@ namespace Blackbird.Commom.ObjectMapper
         /// <param name="source">Source object</param>
         public static TDestination MapTo<TDestination>(this object source)
         {
-            return Mapper.Map<TDestination>(source);
+            return AutoMapper.Mapper.Map<TDestination>(source);
         }
 
         /// <summary>
@@ -27,7 +26,7 @@ namespace Blackbird.Commom.ObjectMapper
         /// <returns></returns>
         public static TDestination MapTo<TSource, TDestination>(this TSource source, TDestination destination)
         {
-            return Mapper.Map(source, destination);
+            return AutoMapper.Mapper.Map(source, destination);
         }
     }
 }

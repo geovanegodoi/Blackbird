@@ -6,6 +6,7 @@
 
   <ItemGroup>
     <Compile Remove="Class1.cs" />
+    <Compile Remove="Repositories\CustomerRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Services\" />
@@ -16,5 +17,8 @@
     <Folder Include="Repositories\" />
     <Folder Include="UnitOfWork\" />
     <Folder Include="Enumerations\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Blackbird.Commom\Blackbird.Commom.csproj" />
   </ItemGroup>
 </Project>

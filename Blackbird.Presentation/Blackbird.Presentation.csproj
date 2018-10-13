@@ -7,10 +7,12 @@
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.App" />
     <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="2.1.1" />
+    <PackageReference Include="Castle.Windsor.MsDependencyInjection" Version="3.3.1" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\Blackbird.Commom\Blackbird.Commom.csproj" />
     <ProjectReference Include="..\Blackbird.Application\Blackbird.Application.csproj" />
+    <ProjectReference Include="..\Blackbird.Persistence\Blackbird.Persistence.csproj" />
   </ItemGroup>
 </Project>

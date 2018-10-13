@@ -5,18 +5,17 @@ using System.Linq.Expressions;
 using System.Threading.Tasks;
 using Blackbird.Domain.Entities;
 using Blackbird.Domain.Repositories;
-using Blackbird.Infrastructure.ORM;
+using Blackbird.Persistence.ORM;
 using Microsoft.EntityFrameworkCore;
 
-namespace Blackbird.Infrastructure.Repositories
+namespace Blackbird.Persistence.Repositories
 {
     public abstract class RepositoryAsyncBase<TKey, TEntity> : 
         RepositoryBase<TKey, TEntity>, 
         IRepositoryAsync<TKey, TEntity>
         where TEntity : class, IEntity<TKey>
     {
-        protected RepositoryAsyncBase(BlackbirdDbContext context)
-            : base(context)
+        protected RepositoryAsyncBase() : base()
         {
 
         }

@@ -1,4 +1,10 @@
-﻿using Blackbird.Commom.ObjectMapper;
+﻿using System;
+using Blackbird.Application.TO;
+using Blackbird.Commom.IoC;
+using Blackbird.Commom.Mapper;
+using Blackbird.Commom.ServiceLocation;
+using Blackbird.Presentation.Controllers;
+using Castle.Windsor.MsDependencyInjection;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -18,7 +24,7 @@ namespace Blackbird.Presentation
         public IConfiguration Configuration { get; }
 
         // This method gets called by the runtime. Use this method to add services to the container.
-        public void ConfigureServices(IServiceCollection services)
+        public IServiceProvider ConfigureServices(IServiceCollection services)
         {
             services.Configure<CookiePolicyOptions>(options =>
             {
@@ -26,14 +32,18 @@ namespace Blackbird.Presentation
                 options.CheckConsentNeeded = context => true;
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
-
-
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+
+            ServiceLocator.SetLocatorProvider(IoCHelper.GetLocator);
+
+            return WindsorRegistrationHelper.CreateServiceProvider(IoCAdapter.Build().Container, services);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
+            MapperHelper.InitiateAutoMapper();
+
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
@@ -54,8 +64,6 @@ namespace Blackbird.Presentation
                     name: "default",
                     template: "{controller=Home}/{action=Index}/{id?}");
             });
-
-            ObjectMapper.RegisterMappings();
         }
     }
 }

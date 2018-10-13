@@ -4,10 +4,10 @@ using System.Linq;
 using System.Linq.Expressions;
 using Blackbird.Domain.Entities;
 using Blackbird.Domain.Repositories;
-using Blackbird.Infrastructure.ORM;
+using Blackbird.Persistence.ORM;
 using Microsoft.EntityFrameworkCore;
 
-namespace Blackbird.Infrastructure.Repositories
+namespace Blackbird.Persistence.Repositories
 {
     public abstract class RepositoryBase<TKey, TEntity> : 
         IRepository<TKey, TEntity>
@@ -16,9 +16,9 @@ namespace Blackbird.Infrastructure.Repositories
         protected readonly BlackbirdDbContext _context;
         protected readonly DbSet<TEntity> _table;
 
-        protected RepositoryBase(BlackbirdDbContext context)
+        protected RepositoryBase()
         {
-            _context = context;
+            _context = BlackbirdDbContext.CreateDbContext();
             _table = _context.Set<TEntity>();
         }
 

@@ -1,0 +1,47 @@
+@model IEnumerable<Blackbird.Application.TO.CustomerTO>
+
+@{
+    ViewData["Title"] = "Index";
+    int counter = 1;
+}
+
+<h2>Index</h2>
+
+<p>
+    <a asp-action="Create"><input type="button" value="Create New" class="btn btn-primary" /></a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th></th>
+            <th>
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Email)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {    
+        <tr>
+            <td>
+                @counter
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Email)
+            </td>
+            <td>
+                <a asp-action="Edit"><input type="button" value="Edit" class="btn btn-default" /></a>
+                <a asp-action="Detail"><input type="button" value="Detail" class="btn btn-default" /></a>
+                <a asp-action="Delete"><input type="button" value="Delete" class="btn btn-default" /></a>
+            </td>
+        </tr>
+    counter++;
+}
+    </tbody>
+</table>

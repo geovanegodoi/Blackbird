@@ -6,5 +6,6 @@ namespace Blackbird.Application.TO
     /// </summary>
     public interface ITO
     {
+
     }
 }

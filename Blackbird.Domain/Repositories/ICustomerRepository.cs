@@ -1,4 +1,5 @@
 ﻿using System;
+using Blackbird.Commom.IoC;
 using Blackbird.Domain.Entities;
 
 namespace Blackbird.Domain.Repositories

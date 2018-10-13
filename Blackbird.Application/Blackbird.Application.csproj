@@ -13,10 +13,12 @@
     <Folder Include="Services\Person\" />
     <Folder Include="Services\Product\" />
     <Folder Include="Services\Purchase\" />
+    <Folder Include="MapperInitializer\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Blackbird.Domain\Blackbird.Domain.csproj" />
     <ProjectReference Include="..\Blackbird.Commom\Blackbird.Commom.csproj" />
+    <ProjectReference Include="..\Blackbird.Infrastructure\Blackbird.Infrastructure.csproj" />
   </ItemGroup>
   <ItemGroup>
     <None Remove="DTO\README.md" />
