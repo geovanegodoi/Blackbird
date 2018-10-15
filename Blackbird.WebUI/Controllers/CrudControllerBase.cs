@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using Blackbird.Application.Services;
 using Blackbird.Application.TO;
+using Blackbird.Commom.ExtendedTypes;
 using Blackbird.Commom.ServiceLocation;
 using Microsoft.AspNetCore.Mvc;
 
@@ -21,9 +22,10 @@ namespace Blackbird.WebUI.Controllers
         }
 
         [HttpGet]
-        public IActionResult Index()
+        public IActionResult Index(int? pageIndex, int? pageSize)
         {
-            return View(_service.GetAll());
+            var criteria = new PagingCriteria { PageIndex = pageIndex ?? 1, PageSize = pageSize ?? 5 };
+            return View(_service.GetAll(criteria));
         }
 
         [HttpGet]

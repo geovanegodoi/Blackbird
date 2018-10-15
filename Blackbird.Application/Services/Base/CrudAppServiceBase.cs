@@ -1,6 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 using Blackbird.Application.TO;
+using Blackbird.Commom.ExtendedTypes;
 using Blackbird.Commom.Mapper;
 using Blackbird.Domain.Entities;
 using Blackbird.Domain.Repositories;
@@ -54,9 +57,10 @@ namespace Blackbird.Application.Services
             return _repository.Get(id).MapTo<TDto>();
         }
 
-        public ICollection<TDto> GetAll()
+        public PaginatedList<TDto> GetAll(PagingCriteria criteria)
         {
-            return _repository.GetAll().MapTo<ICollection<TDto>>();
+            var entity = _repository.GetAll(criteria);
+            return new PaginatedList<TDto>(entity.MapTo<List<TDto>>(), entity.TotalCount, criteria);
         }
 
         public void Update(TKey key, TDto model)

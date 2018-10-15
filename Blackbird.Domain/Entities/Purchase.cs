@@ -16,10 +16,9 @@ namespace Blackbird.Domain.Entities
 
         public PaymentType PaymentType { get; set; }
 
-        public Purchase(Guid customerId, PaymentType payment) : base(Guid.NewGuid())
+        public Purchase() : base(Guid.NewGuid())
         {
-            CustomerId = customerId;
-            PaymentType = payment;
+
         }
     }
 }

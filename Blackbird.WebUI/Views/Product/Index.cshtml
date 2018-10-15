@@ -1,4 +1,4 @@
-@model IEnumerable<Blackbird.Application.TO.ProductTO>
+@model PaginatedList<Blackbird.Application.TO.ProductTO>
 
 @{
     ViewData["Title"] = "Index";
@@ -8,40 +8,47 @@
 <h2>Index</h2>
 
 <p>
-    <a asp-action="Create"><input type="button" value="Create New" class="btn btn-primary" /></a>
+    <a asp-action="Create" class="btn btn-primary">Create New</a>
 </p>
 <table class="table">
     <thead>
         <tr>
             <th></th>
             <th>
-                @Html.DisplayNameFor(model => model.Name)
+                Name
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Description)
+                Description
             </th>
             <th></th>
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {    
-        <tr>
-            <td>
-                @counter
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Name)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Description)
-            </td>
-            <td>
-                <a asp-action="Edit"><input type="button" value="Edit" class="btn btn-default" /></a>
-                <a asp-action="Detail"><input type="button" value="Detail" class="btn btn-default" /></a>
-                <a asp-action="Delete"><input type="button" value="Delete" class="btn btn-default" /></a>
-            </td>
-        </tr>
-    counter++;
-}
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @counter
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Description)
+                </td>
+                <td>
+                    <a asp-action="Edit" class="btn btn-default">Edit</a>
+                    <a asp-action="Detail" class="btn btn-default">Detail</a>
+                    <a asp-action="Delete" class="btn btn-default">Delete</a>
+                </td>
+            </tr>
+            counter++;
+        }
     </tbody>
 </table>
+@{
+    var prevDisabled = !Model.HasPreviousPage ? "disabled" : "";
+    var nextDisabled = !Model.HasNextPage ? "disabled" : "";
+}
+<a asp-action="Index" asp-route-pageIndex="@(Model.PageIndex-1)" class="btn btn-default @prevDisabled">Previous</a>
+<a asp-action="Index" asp-route-pageIndex="@(Model.PageIndex+1)" class="btn btn-default @nextDisabled">Next</a>

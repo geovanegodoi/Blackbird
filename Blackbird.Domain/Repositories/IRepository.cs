@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
+using Blackbird.Commom.ExtendedTypes;
 using Blackbird.Commom.IoC;
 using Blackbird.Domain.Entities;
 
@@ -31,20 +32,20 @@ namespace Blackbird.Domain.Repositories
         /// Used to get a IQueryable that is used to retrieve entities from entire table.
         /// </summary>
         /// <returns>IQueryable to be used to select entities from database</returns>
-        IQueryable<TEntity> GetAll();
+        //IQueryable<TEntity> GetAll(int? pageIndex);
 
         /// <summary>
         /// Used to get all entities.
         /// </summary>
         /// <returns>List of all entities</returns>
-        List<TEntity> GetAllList();
+        PaginatedList<TEntity> GetAll(PagingCriteria criteria);
 
         /// <summary>
         /// Used to get all entities based on given <paramref name="predicate"/>.
         /// </summary>
         /// <param name="predicate">A condition to filter entities</param>
         /// <returns>List of all entities</returns>
-        List<TEntity> GetAllList(Expression<Func<TEntity, bool>> predicate);
+        PaginatedList<TEntity> GetAll(PagingCriteria criteria, Expression<Func<TEntity, bool>> predicate);
 
         /// <summary>
         /// Inserts a new entity.

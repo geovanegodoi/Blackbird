@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Threading.Tasks;
+using Blackbird.Commom.ExtendedTypes;
 
 namespace Blackbird.Application.Services
 {
@@ -7,7 +9,7 @@ namespace Blackbird.Application.Services
     {
         TDto Get(TKey id);
 
-        ICollection<TDto> GetAll();
+        PaginatedList<TDto> GetAll(PagingCriteria criteria);
 
         TDto Create(TDto model);
 

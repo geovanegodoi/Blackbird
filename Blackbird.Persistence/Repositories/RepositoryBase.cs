@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
+using Blackbird.Commom.ExtendedTypes;
 using Blackbird.Domain.Entities;
 using Blackbird.Domain.Repositories;
 using Blackbird.Persistence.Context;
@@ -32,19 +33,14 @@ namespace Blackbird.Persistence.Repositories
             return _table.FirstOrDefault(predicate);
         }
 
-        public IQueryable<TEntity> GetAll()
+        public PaginatedList<TEntity> GetAll(PagingCriteria criteria)
         {
-            return _table;
+            return PaginatedList<TEntity>.Create(_table, criteria).Result;
         }
 
-        public List<TEntity> GetAllList()
+        public PaginatedList<TEntity> GetAll(PagingCriteria criteria, Expression<Func<TEntity, bool>> predicate)
         {
-            return _table.ToList();
-        }
-
-        public List<TEntity> GetAllList(Expression<Func<TEntity, bool>> predicate)
-        {
-            return _table.Where(predicate).ToList();
+            return PaginatedList<TEntity>.Create(_table.Where(predicate), criteria).Result;
         }
 
         public TEntity Insert(TEntity entity)

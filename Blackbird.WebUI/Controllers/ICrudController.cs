@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using Blackbird.Application.Services;
+using Blackbird.Commom.ExtendedTypes;
 using Blackbird.Commom.IoC;
 using Microsoft.AspNetCore.Mvc;
 
@@ -9,7 +10,7 @@ namespace Blackbird.WebUI.Controllers
     public interface ICrudController<TKey, TDto> : IControllerLifestyle
     {
         [HttpGet]
-        IActionResult Index();
+        IActionResult Index(int? pageIndex, int? pageSize);
 
         [HttpGet]
         IActionResult Details(TKey id);

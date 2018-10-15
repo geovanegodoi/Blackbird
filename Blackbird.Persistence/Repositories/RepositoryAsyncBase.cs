@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Threading.Tasks;
+using Blackbird.Commom.ExtendedTypes;
 using Blackbird.Domain.Entities;
 using Blackbird.Domain.Repositories;
 using Blackbird.Persistence.Context;
@@ -30,14 +31,14 @@ namespace Blackbird.Persistence.Repositories
             return await Task.Run(() => _table.FirstOrDefault(predicate));
         }
 
-        public async Task<List<TEntity>> GetAllListAsync()
+        public async Task<PaginatedList<TEntity>> GetAllAsync(PagingCriteria criteria)
         {
-            return await _table.ToListAsync();
+            return await PaginatedList<TEntity>.Create(_table, criteria);
         }
 
-        public async Task<List<TEntity>> GetAllListAsync(Expression<Func<TEntity, bool>> predicate)
+        public async Task<PaginatedList<TEntity>> GetAllAsync(PagingCriteria criteria, Expression<Func<TEntity, bool>> predicate)
         {
-            return await _table.Where(predicate).ToListAsync();
+            return await PaginatedList<TEntity>.Create(_table.Where(predicate), criteria);
         }
 
         public async Task<TKey> InsertAndGetIdAsync(TEntity entity)

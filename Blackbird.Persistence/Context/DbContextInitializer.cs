@@ -38,6 +38,10 @@ namespace Blackbird.Persistence.Context
 
         private void SeedCustomers(BlackbirdDbContext context)
         {
+            if (context.Customers.Any())
+            {
+                return;
+            }
             var customers = new List<Customer>();
             foreach (var person in context.People)
             {
@@ -49,9 +53,15 @@ namespace Blackbird.Persistence.Context
 
         private void SeedProducts(BlackbirdDbContext context)
         {
-            var prodCodes = new string[] { "A", "B", "C", "D", "E", "F", "G", "H", "I", "J" };
+            if (context.Products.Any())
+            {
+                return;
+            }
+            var codes = new string[] { "A", "B", "C", "D", "E", "F", "G", "H", 
+                                       "I", "J", "K", "L", "M", "N", "O", "P", 
+                                       "Q", "R", "S", "T", "U", "W", "X", "Y", "Z" };
             var products = new List<Product>();
-            foreach (var code in prodCodes)
+            foreach (var code in codes)
             {
                 products.Add(new Product($"Product {code}", $"This is the description of the product {code}"));
             }
@@ -61,7 +71,10 @@ namespace Blackbird.Persistence.Context
 
         private void SeedPurchases(BlackbirdDbContext context)
         {
-
+            if (context.Purchases.Any())
+            {
+                return;
+            }
         }
 
         private static string ToLogin(string Name)

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq.Expressions;
 using System.Threading.Tasks;
+using Blackbird.Commom.ExtendedTypes;
 using Blackbird.Commom.IoC;
 
 namespace Blackbird.Domain.Repositories
@@ -25,14 +26,14 @@ namespace Blackbird.Domain.Repositories
         /// Used to get all entities.
         /// </summary>
         /// <returns>List of all entities</returns>
-        Task<List<TEntity>> GetAllListAsync();
+        Task<PaginatedList<TEntity>> GetAllAsync(PagingCriteria criteria);
 
         /// <summary>
         /// Used to get all entities based on given <paramref name="predicate"/>.
         /// </summary>
         /// <param name="predicate">A condition to filter entities</param>
         /// <returns>List of all entities</returns>
-        Task<List<TEntity>> GetAllListAsync(Expression<Func<TEntity, bool>> predicate);
+        Task<PaginatedList<TEntity>> GetAllAsync(PagingCriteria criteria, Expression<Func<TEntity, bool>> predicate);
 
         /// <summary>
         /// Inserts a new entity.

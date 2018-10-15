@@ -1,4 +1,5 @@
 ﻿using System;
+using Blackbird.Commom.ExtendedTypes;
 using Blackbird.Commom.Mapper;
 
 namespace Blackbird.Application.MapperInitializer
